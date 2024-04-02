@@ -18,6 +18,10 @@ requests_assets = load_assets_from_modules(
     group_name="requests",
 )
 
+
+dbt_analytics_assets = load_assets_from_modules(modules=[dbt]) # Load the assets from the file
+
+
 all_jobs = [trip_update_job, weekly_update_job, adhoc_request_job]
 all_schedules = [trip_update_schedule, weekly_update_schedule]
 all_sensors = [adhoc_request_sensor]
