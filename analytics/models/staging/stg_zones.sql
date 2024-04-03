@@ -1,6 +1,6 @@
-with raw_zones as (
+with raw_ringcentral_user_log as (
     select *
-    from {{ source('raw_taxis', 'zones') }}
+    from {{ source('raw_taxis', 'sf_ringcentral_user_call_log') }}
 )
 select
     zone_id,
