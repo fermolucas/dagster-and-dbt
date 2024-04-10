@@ -97,7 +97,7 @@ def manhattan_stats(database: DuckDBResource):
 ## Lesson 4 (later part)
 @asset(
     deps=[AssetKey(["manhattan", "manhattan_stats"])],
-    compute_kind="Python",
+    compute_kind="Python"
 )
 def manhattan_map() -> MaterializeResult:
     """

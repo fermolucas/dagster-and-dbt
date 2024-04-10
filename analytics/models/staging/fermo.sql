@@ -1,10 +1,10 @@
-with raw_ringcentral_user_log as (
+with taxi_log as (
     select *
-    from {{ source('raw_taxis', 'zones') }}
+    from {{ source('raw_taxis', 'manhattan_map') }}
 )
 select
     zone_id,
     zone as zone_name,
     borough,
     zone_name like '%Airport' as is_airport
-from raw_zones
+from taxi_log

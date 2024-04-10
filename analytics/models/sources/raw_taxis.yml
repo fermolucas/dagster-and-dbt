@@ -6,3 +6,4 @@ sources:
     tables:
       - name: zones
       - name: trips
+      - name: manhattan_map
